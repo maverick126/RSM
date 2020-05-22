@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="SQSAdmin_WpfCustomControlLibrary.ctrlStudioMAttributes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:SQSAdmin_WpfCustomControlLibrary.Common" 
+             xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"             
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/MyStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/SimpleStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/DataGridCustomizations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+        <Border x:Name="myNavigationBorder1" BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5">
+            <Border BorderBrush="{DynamicResource MyBrightBlueSolidBrush2}" BorderThickness="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="myNavigationBorder2">
+                <Border BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Background="#FFFFFFFF" ScrollViewer.HorizontalScrollBarVisibility="Auto" x:Name="myNavigationBorder3">
+                <Grid Background="{DynamicResource MyToolBarBlueGradientBrush}">
+                        <TextBlock Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" Background="{DynamicResource MyToolBarBlueGradientBrush}" FontWeight="Bold" FontSize="12" ></TextBlock>
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="15,13,0,0" Name="textBlock1" FontWeight="Bold" Text="{Binding}" VerticalAlignment="Top" />
+                                <Grid Margin="0,50,0,0">
+                                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,22,0,0"  Height="23" Name="textBlock2" Text="Select Supplier Brand: "/>
+                        <ComboBox  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,20,0,0" Height="23" Name="cmbSupplier" Width="350" Style="{DynamicResource MyEditableComboBoxStyle}" ItemsSource="{Binding Path=SQSSupplierBrand}" SelectedValuePath="SupplierBrandID" DisplayMemberPath="SupplierBrandName" SelectedIndex="0" SelectionChanged="cmbSupplier_SelectionChanged"/>
+                                <TabControl Margin="0,60,0,0" Style="{DynamicResource SimpleTabControl}" Name="producttab">
+                                    <TabItem Header="Configure StudioM Questions" Style="{DynamicResource SimpleTabItem}" Name="tab1">
+                                          <Grid  Background="{DynamicResource MyToolBarBlueGradientBrush}" >
+                                                <TextBlock  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0" Height="23" Name="textBlock3" Text="Select Question: "/>
+                                                <TextBlock  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,10,0,0" Height="23" Name="textBlock0" Text="* is mandatory question."/>
+                                                <TextBlock  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" Height="23" Name="textBlock4" Text="Select Answer: "/>
+                                                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" Height="23" Name="cmbQuestion" Width="350" Style="{DynamicResource MyEditableComboBoxStyle}" ItemsSource="{Binding Path=StudioMQuestion}" SelectedValuePath="QuestionID" DisplayMemberPath="QuestionAndType" SelectedIndex="0" SelectionChanged="cmbQuestion_SelectionChanged" />
+                                                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,40,0,0" Height="23" Name="cmbAnswer" Width="350" Style="{DynamicResource MyEditableComboBoxStyle}" ItemsSource="{Binding Path=StudioMAnswer}" SelectedValuePath="AnswerID" DisplayMemberPath="AnswerText" SelectedIndex="0"/>
+                                                <Button Name="btnAdd" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,40,0,0" Width="170" Height="23" Style="{DynamicResource MyButtonStyle}" Content="Add Attributes To Template"  Click="btnAdd_Click"></Button>
+                                                    <dg:DataGrid CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}"
+                                                           HorizontalAlignment="Stretch" Width="Auto" VerticalAlignment="Stretch" Height="Auto" Margin="1,85,1,50" Name="dataGrid2" ItemsSource="{Binding Path=StudioMQandA}" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+                                                        <dg:DataGrid.Columns>
+                                                            <dg:DataGridTextColumn Header="" Binding="{Binding Path=SupplierBrandID}" Width="0" Visibility="Collapsed"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="Brand Name" Binding="{Binding Path=SupplierBrandName}" Width="*" IsReadOnly="True"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="" Binding="{Binding Path=QuestionID}" Width="0" Visibility="Collapsed"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="Question" Binding="{Binding Path=QuestionText}" Width="*" IsReadOnly="True"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="" Binding="{Binding Path=AnswerID}" Width="0" Visibility="Collapsed"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="Answer" Binding="{Binding Path=AnswerText}" Width="*"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTemplateColumn Header="Mandatory" IsReadOnly="True" Width="52">
+                                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <CheckBox x:Name="chkActive3" VerticalAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding Path=Mandatory}" IsEnabled="False"/>
+                                                                    </DataTemplate>
+                                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                                            </dg:DataGridTemplateColumn>
+                                                            <dg:DataGridTemplateColumn>
+                                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <Button  Name="btnDelete" Click="btnDelete_Click" CommandParameter="{Binding}" Cursor="Hand" ToolTip="Delete Q/A.">
+                                                                            <StackPanel>
+                                                                                <Image Source="Images/delete.png" />
+                                                                            </StackPanel>
+                                                                        </Button>
+                                                                    </DataTemplate>
+                                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                                            </dg:DataGridTemplateColumn>
+                                                        </dg:DataGrid.Columns>
+
+                                                    </dg:DataGrid>
+                                                <Button  Width="180" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,10,0,15" Height="22" Content="Save Template To Product" Style="{DynamicResource MyButtonStyle}" Click="Button_Click" ></Button>
+                                            </Grid>
+
+                                    </TabItem>
+                                    <TabItem Header="Upload Images For Selected Brand" Style="{DynamicResource SimpleTabItem}" Name="tab2">
+
+                                          <Grid Background="{DynamicResource MyToolBarBlueGradientBrush}">
+                                    <Button Name="btnUpload" Style="{DynamicResource MyBottomLeftButtonStyle}" Background="Transparent" BorderThickness="0,0,0,0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="120"  Click="btnUpload_Click">
+                                                    <StackPanel Width="113" Height="22" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                                        <Image Margin="0,5,0,0" Width="18" Height="18" Source="Images/add.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                                        <TextBlock HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource MyBlueSolidBrush2}" Text="Upload Image"/>
+
+                                                    </StackPanel>
+                                                </Button>
+ 
+                                                    <dg:DataGrid  CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}" VerticalAlignment="Stretch" Height="Auto" Margin="1,40,1,1"
+                                                 HorizontalAlignment="Stretch" Width="Auto" Name="dataGrid3" ItemsSource="{Binding Path=StudioMProductImage}" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+                                                        <dg:DataGrid.Columns>
+                                                            <dg:DataGridTextColumn Header="" Binding="{Binding Path=ImageID}" Width="0" Visibility="Collapsed"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="Brand Name" Binding="{Binding Path=SupplierBrandName}" Width="*" IsReadOnly="True"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTextColumn Header="Image Name" Binding="{Binding Path=ImageName}" Width="370" IsReadOnly="True"></dg:DataGridTextColumn>
+                                                            <dg:DataGridTemplateColumn Header="Thumbnail" >
+                                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <Image Source="{Binding BMPImage}" Width="{Binding Path=ThumbnailWidth}" Height="{Binding Path=ThumbnailHeight}"></Image>
+                                                                    </DataTemplate>
+                                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                                            </dg:DataGridTemplateColumn>
+                                                            <dg:DataGridTemplateColumn>
+                                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <Button  Name="btnDeleteImage" Click="btnDeleteImage_Click" CommandParameter="{Binding}" Cursor="Hand" ToolTip="Delete image.">
+                                                                            <StackPanel>
+                                                                                <Image Source="Images/delete.png" />
+                                                                            </StackPanel>
+                                                                        </Button>
+                                                                    </DataTemplate>
+                                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                                            </dg:DataGridTemplateColumn>
+                                                            <dg:DataGridTemplateColumn>
+                                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <Button  Name="btnView" Click="btnView_Click" CommandParameter="{Binding}" Cursor="Hand" ToolTip="View image.">
+                                                                            <StackPanel>
+                                                                                <Image Source="Images/search.png" />
+                                                                            </StackPanel>
+                                                                        </Button>
+                                                                    </DataTemplate>
+                                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                                            </dg:DataGridTemplateColumn>
+                                                        </dg:DataGrid.Columns>
+
+                                                    </dg:DataGrid>
+
+                                            </Grid>
+
+                                    </TabItem>
+                                    </TabControl>
+                                <!--<CheckBox Content="Filter By Selected Supplier" Grid.Column="3" Grid.Row="1" Height="16" HorizontalAlignment="Left" Margin="34,8,0,0" Name="chkFilter" VerticalAlignment="Top" DataContextChanged="chkFilter_DataContextChanged"/>-->
+                            </Grid>
+                </Grid>
+                </Border>
+            </Border>
+        </Border>
+</UserControl>

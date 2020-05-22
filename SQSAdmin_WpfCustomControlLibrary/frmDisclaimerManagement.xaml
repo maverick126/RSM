@@ -1,0 +1,220 @@
+﻿<Window x:Class="SQSAdmin_WpfCustomControlLibrary.frmDisclaimerManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:SQSAdmin_WpfCustomControlLibrary.Common" 
+        xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit" 
+        WindowStartupLocation="CenterScreen"
+        Title="Disclaimer Management" Height="900" Width="1200">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/MyStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/SimpleStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/DataGridCustomizations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <!-- Set the styles for the tool bar. -->
+    <Border x:Name="myNavigationBorder1" BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Grid.ColumnSpan="1">
+        <Border BorderBrush="{DynamicResource MyBrightBlueSolidBrush2}" BorderThickness="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="myNavigationBorder2">
+            <Border BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Background="#FFFFFFFF" ScrollViewer.HorizontalScrollBarVisibility="Auto" x:Name="myNavigationBorder3">
+
+                <Grid Background="{DynamicResource MyToolBarBlueGradientBrush}">
+                        <!-- Set the styles for the tool bar. -->
+                        <Grid.Resources>
+                            <Style TargetType="{x:Type Button}" x:Key="formatTextStyle">
+                                <Setter Property="FontFamily" Value="Palatino Linotype"></Setter>
+                                <Setter Property="Width" Value="30"></Setter>
+                                <Setter Property="FontSize" Value ="14"></Setter>
+                                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+                            </Style>
+
+                            <Style TargetType="{x:Type Button}" x:Key="formatImageStyle">
+                                <Setter Property="Width" Value="30"></Setter>
+                                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+                            </Style>
+                        </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <Label Content="This function allows user configure the disclaimers for print out in SQS and MRS." Height="28" HorizontalAlignment="Left" Margin="15,0,0,0" Name="label1" VerticalAlignment="Top" Width="500" FontWeight="Bold"/>
+                    </StackPanel>
+                    <TextBlock Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="696,0,0,0" Name="textBlock1" Text="Brand:" VerticalAlignment="Top" />
+                    <ComboBox Grid.Row="1" Style="{DynamicResource MyEditableComboBoxStyle}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="742,0,0,0" Name="cmbBrand" Width="154" ItemsSource="{Binding Path=SQSBrand}" SelectedValuePath="BrandID" DisplayMemberPath="BrandName" SelectedValue="0" />
+                    <TextBlock Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="25,0,0,0" Name="textBlock2" Text="State:" VerticalAlignment="Top" />
+                    <ComboBox Grid.Row="1" Style="{DynamicResource MyEditableComboBoxStyle}" Height="23" HorizontalAlignment="Left" Margin="80,0,0,0" Name="cmbState" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=SQSState}" SelectedValuePath="StateID" DisplayMemberPath="StateAbbreviation" SelectedValue="{Binding Path=DefaultStateID}"  SelectionChanged="cmbState_SelectionChanged"/>
+                    <TextBlock Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="461,0,0,0" Name="textBlock3" Text="Type:" VerticalAlignment="Top" />
+                    <ComboBox Grid.Row="1" Style="{DynamicResource MyEditableComboBoxStyle}" Height="23" HorizontalAlignment="Left" Margin="502,0,0,0" Name="cmbType" VerticalAlignment="Top" Width="175">
+                        <ComboBoxItem IsSelected="True">Sales Estimate</ComboBoxItem>
+                        <ComboBoxItem>New Home Order Form</ComboBoxItem>
+                            <!--<ComboBoxItem>PC</ComboBoxItem>
+                            <ComboBoxItem>HIA</ComboBoxItem>
+                            <ComboBoxItem>Variation</ComboBoxItem>
+                            <ComboBoxItem>Price List</ComboBoxItem>-->
+                        </ComboBox>
+                    <Button Grid.Row="1" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" HorizontalAlignment="Left" Margin="925,0,0,0" Name="bthSearch" VerticalAlignment="Top" Width="75" Click="bthSearch_Click" />
+                    <Button Grid.Row="1" Style="{DynamicResource MyButtonStyle}" Content="Save" Height="23" HorizontalAlignment="Left" Margin="1095,0,0,0" Name="btnSaveRTBContent" VerticalAlignment="Top" Width="75" Click="bthSaveRTBContent_Click" />
+                    <TextBlock Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="214,0,0,0" Name="textBlock4" Text="Region:" VerticalAlignment="Top" />
+                    <ComboBox Grid.Row="1" Style="{DynamicResource MyEditableComboBoxStyle}" Height="23" HorizontalAlignment="Left" Margin="261,0,0,0" Name="cmbRegion" VerticalAlignment="Top" Width="180" ItemsSource="{Binding Path=SQSRegion}" SelectedValuePath="RegionID" DisplayMemberPath="RegionName" SelectedValue="0"/>
+                    
+                        <!-- This tool bar contains all the editing buttons. -->
+                    <ToolBar Grid.Row="2" Name="mainToolBar" Height="30">
+
+                            <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Cut" ToolTip="Cut">
+                                <Image Source="Images\EditCut.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Copy" ToolTip="Copy">
+                                <Image Source="Images\EditCopy.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Paste" ToolTip="Paste">
+                                <Image Source="Images\EditPaste.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Undo" ToolTip="Undo">
+                                <Image Source="Images\EditUndo.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo">
+                                <Image Source="Images\EditRedo.png"></Image>
+                            </Button>
+
+                            <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                                <TextBlock FontWeight="Bold">B</TextBlock>
+                            </Button>
+                            <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                                <TextBlock FontStyle="Italic" FontWeight="Bold">I</TextBlock>
+                            </Button>
+                            <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                                <TextBlock TextDecorations="Underline" FontWeight="Bold">U</TextBlock>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
+                                <Image Source="Images\CharacterGrowFont.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
+                                <Image Source="Images\CharacterShrinkFont.png"></Image>
+                            </Button>
+
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
+                                <Image Source="Images\ListBullets.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
+                                <Image Source="Images/ListNumbering.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
+                                <Image Source="Images\ParagraphLeftJustify.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
+                                <Image Source="Images\ParagraphCenterJustify.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
+                                <Image Source="Images\ParagraphRightJustify.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
+                                <Image Source="Images\ParagraphFullJustify.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
+                                <Image Source="Images\ParagraphIncreaseIndentation.png"></Image>
+                            </Button>
+                            <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
+                                <Image Source="Images\ParagraphDecreaseIndentation.png"></Image>
+                            </Button>
+
+                        </ToolBar>
+                    <RichTextBox Grid.Row="3" Name="richTB" MinHeight="717">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Run>Paragraph 1</Run>
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+
+                    <!--
+                    <dg:DataGrid AutoGenerateColumns="False" Height="Auto" Margin="15,88,14,50" HorizontalAlignment="Stretch" Name="dataGrid1" VerticalAlignment="Stretch" Width="Auto" ItemsSource="{Binding Path=SQSFullMultiplePromotion}"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}" RowDetailsVisibilityMode="Collapsed">
+                        <dg:DataGrid.RowStyle>
+                            <Style TargetType="{x:Type dg:DataGridRow}">
+                                <EventSetter Event="MouseDoubleClick" Handler="RowDoubleClick"/>
+                            </Style>
+                        </dg:DataGrid.RowStyle>
+                        <dg:DataGrid.Columns>
+                            <dg:DataGridTextColumn Header="Promotionid" Binding="{Binding Path=PromotionID}" Visibility="Hidden"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="ID" Binding="{Binding Path=MultiplePromotionID}" IsReadOnly="True" Width="Auto" x:Name="multipromoid"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Promotion Name" Binding="{Binding Path=PromotionName}" IsReadOnly="True" Width="Auto"></dg:DataGridTextColumn>
+                            -->
+                    <!--<dg:DataGridTemplateColumn Header="Promotion Name" Width="*">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                               <TextBox Name="txtpromoname" Text="{Binding Path=PromotionName,Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Stretch" LostFocus="txtpromoname_LostFocus"></TextBox>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>-->
+                    <!--
+                            <dg:DataGridTextColumn Header="Promotion Type" Binding="{Binding Path=PromotionType}" IsReadOnly="True" Width="Auto"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Brand" Binding="{Binding Path=BrandName}" IsReadOnly="True" Width="Auto"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Storey" Binding="{Binding Path=Storey}" IsReadOnly="True" Width="80"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Base Product" Binding="{Binding Path=BaseProduct, Mode=OneWay}" Width="120"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Promotion Cost" Binding="{Binding Path=PromotionCost, Mode=OneWay, StringFormat='c'}" Width="100"></dg:DataGridTextColumn>
+                            <dg:DataGridTextColumn Header="Cape Value" Binding="{Binding Path=CapeVale, Mode=OneWay, StringFormat='c'}" ></dg:DataGridTextColumn>
+                            <dg:DataGridCheckBoxColumn Header="For Regional" Binding="{Binding Path=ForRegional, Mode=TwoWay}" Width="100"></dg:DataGridCheckBoxColumn>
+                            <dg:DataGridTextColumn Header="Display Code" Binding="{Binding Path=DisplayCodeName}" IsReadOnly="True" Width="80"></dg:DataGridTextColumn>
+
+                            <dg:DataGridCheckBoxColumn Header="Active" Binding="{Binding Path=Active, Mode=TwoWay}" Width="50"></dg:DataGridCheckBoxColumn>
+                            <dg:DataGridTemplateColumn>
+                                <dg:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button  Name="btnConfig" Click="Config_Click" CommandParameter="{Binding Path=MultiplePromotionID}" Cursor="Hand" ToolTip="Configure products.">
+                                            <StackPanel>
+                                                <Image Source="Images/book_add.png" />
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </dg:DataGridTemplateColumn.CellTemplate>
+                            </dg:DataGridTemplateColumn>
+                            <dg:DataGridTemplateColumn>
+                                <dg:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button  Name="btnCopy" Click="btnCopy_Click" CommandParameter="{Binding Path=MultiplePromotionID}" Cursor="Hand" ToolTip="Copy configure from other promotion.">
+                                            <StackPanel>
+                                                <Image Source="Images/cd_add.png" />
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </dg:DataGridTemplateColumn.CellTemplate>
+                            </dg:DataGridTemplateColumn>
+                        </dg:DataGrid.Columns>
+                        <dg:DataGrid.RowDetailsTemplate>
+                            <DataTemplate>
+                                <StackPanel Name="detailpanel" Background="{DynamicResource MyMouseOverOrangeGradientBrush3}">
+                                    <Grid Margin="15">
+                                        <TextBlock Margin="10,0,0,0" >Promotion Name:</TextBlock>
+                                        <TextBox Margin="180,0,0,0"  Name="txtAName" Text="{Binding Path=PromotionName}" Width="800" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+                                        <TextBlock Margin="10,25,0,0" >Display Code:</TextBlock>
+                                        <ComboBox Margin="180,25,0,0" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" Width="200" VerticalAlignment="Top"  Name="cmbtype" ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.PriceDisplayCode}" SelectedValuePath="DisplayCodeID" DisplayMemberPath="DisplayCodeName" SelectedValue="{Binding Path=DisplayCodeID}" HorizontalAlignment="Left"></ComboBox>
+                                        <TextBlock Margin="10,50,0,0" >Base Product:</TextBlock>
+                                        <TextBox Margin="180,50,0,0"  Name="txtBaseProduct" Text="{Binding Path=BaseProduct}" Width="200" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+                                        <TextBlock Margin="10,75,0,0" >Promotion Cost:</TextBlock>
+                                        <TextBox Margin="180,75,0,0"  Name="txtCost" Text="{Binding Path=PromotionCost}" Width="200" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+                                        <TextBlock Margin="10,100,0,0" >Cape Vale:</TextBlock>
+                                        <TextBox Margin="180,100,0,0"  Name="txtCapeVale" Text="{Binding Path=CapeVale}" Width="200" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+                                        <TextBlock Margin="10,125,0,0" >For Regional:</TextBlock>
+                                        <CheckBox Margin="180,125,0,0" Name="chkregional" IsChecked="{Binding ForRegional}"></CheckBox>
+                                        <TextBlock Margin="10,150,0,0" >Active:</TextBlock>
+                                        <CheckBox Margin="180,150,0,0" Name="chkactive" IsChecked="{Binding Active}"></CheckBox>
+                                        <Button Name="btnSave"  Margin="10,175,0,0" Style="{DynamicResource MyButtonStyle}" Height="22" Width="80" HorizontalAlignment="Left" Click="btnSave_Click">Save</Button>
+                                        <Button Name="btnClose" Margin="100,175,0,0" Style="{DynamicResource MyButtonStyle}" Height="22" Width="80" HorizontalAlignment="Left" Click="btnClose_Click">Close</Button>
+                                    </Grid>
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </dg:DataGrid.RowDetailsTemplate>
+                    </dg:DataGrid>
+
+                    <Button Style="{DynamicResource MyButtonStyle}" Content="New Promotion" Height="23" HorizontalAlignment="Left" Margin="16,10,0,10" Name="btnNew" VerticalAlignment="Bottom" Width="149" Click="btnNew_Click" />-->
+                </Grid>
+
+            </Border>
+        </Border>
+    </Border>
+</Window>

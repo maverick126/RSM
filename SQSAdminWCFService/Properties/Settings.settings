@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SQSAdminWCFService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SQSAdminWCFService_SharepointImagingWebService_Imaging" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm-sharedev01/_vti_bin/imaging.asmx</Value>
+    </Setting>
+    <Setting Name="SQSAdminWCFService_SharepointListWebService_Lists" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm-sharedev01/_vti_bin/Lists.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

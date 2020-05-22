@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQSAdmin", "SQSAdmin.csproj", "{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}"
+	ProjectSection(ProjectDependencies) = postProject
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D} = {264AC80F-44A4-408F-8F0C-CB9454444E1D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQSAdmin_WpfCustomControlLibrary", "..\SQSAdmin_WpfCustomControlLibrary\SQSAdmin_WpfCustomControlLibrary.csproj", "{73E72CDE-0DC4-4655-88D1-50F651FA460C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D} = {264AC80F-44A4-408F-8F0C-CB9454444E1D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeLib", "QRCodeLib\QRCodeLib.csproj", "{E98126B2-AF17-4783-96B9-856D6744DCA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQSAdminWCFService", "..\SQSAdminWCFService\SQSAdminWCFService.csproj", "{264AC80F-44A4-408F-8F0C-CB9454444E1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSelectComboBox", "..\MultiSelectComboBox\MultiSelectComboBox.csproj", "{CE17A54E-0661-429F-AFDC-272E8668B14E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlRichTextBox", "..\HtmlRichTextBox\HtmlRichTextBox.csproj", "{7A4B322E-EC19-4C89-9BA1-06C98D0C4911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSelectComboBoxWinForms", "..\MultiSelectComboBoxWinForms\MultiSelectComboBoxWinForms.csproj", "{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E72CDE-0DC4-4655-88D1-50F651FA460C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E72CDE-0DC4-4655-88D1-50F651FA460C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E72CDE-0DC4-4655-88D1-50F651FA460C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E72CDE-0DC4-4655-88D1-50F651FA460C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98126B2-AF17-4783-96B9-856D6744DCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98126B2-AF17-4783-96B9-856D6744DCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98126B2-AF17-4783-96B9-856D6744DCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98126B2-AF17-4783-96B9-856D6744DCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264AC80F-44A4-408F-8F0C-CB9454444E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE17A54E-0661-429F-AFDC-272E8668B14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE17A54E-0661-429F-AFDC-272E8668B14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE17A54E-0661-429F-AFDC-272E8668B14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE17A54E-0661-429F-AFDC-272E8668B14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4B322E-EC19-4C89-9BA1-06C98D0C4911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4B322E-EC19-4C89-9BA1-06C98D0C4911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4B322E-EC19-4C89-9BA1-06C98D0C4911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4B322E-EC19-4C89-9BA1-06C98D0C4911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://metriconhomes.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SQSAdmin.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\SQSAdmin_WpfCustomControlLibrary\\SQSAdmin_WpfCustomControlLibrary.csproj
+		SccProjectName2 = ../SQSAdmin_WpfCustomControlLibrary
+		SccLocalPath2 = ..\\SQSAdmin_WpfCustomControlLibrary
+		SccProjectUniqueName3 = QRCodeLib\\QRCodeLib.csproj
+		SccProjectName3 = QRCodeLib
+		SccLocalPath3 = QRCodeLib
+		SccProjectUniqueName4 = ..\\SQSAdminWCFService\\SQSAdminWCFService.csproj
+		SccProjectName4 = ../SQSAdminWCFService
+		SccLocalPath4 = ..\\SQSAdminWCFService
+		SccProjectUniqueName5 = ..\\MultiSelectComboBox\\MultiSelectComboBox.csproj
+		SccProjectName5 = ../MultiSelectComboBox
+		SccLocalPath5 = ..\\MultiSelectComboBox
+		SccProjectUniqueName6 = ..\\HtmlRichTextBox\\HtmlRichTextBox.csproj
+		SccProjectName6 = ../HtmlRichTextBox
+		SccLocalPath6 = ..\\HtmlRichTextBox
+		SccProjectUniqueName7 = ..\\MultiSelectComboBoxWinForms\\MultiSelectComboBoxWinForms.csproj
+		SccProjectName7 = ../MultiSelectComboBoxWinForms
+		SccLocalPath7 = ..\\MultiSelectComboBoxWinForms
+	EndGlobalSection
+EndGlobal

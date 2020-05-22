@@ -1,0 +1,3179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SQSAdmin_StudioM_LoadSQSGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_LoadSQSGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_LoadSQSGroupListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetPAGFromProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetPAGFromProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetPAGFromProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetRegionGroupByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pstateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetRegionGroupByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetRegionGroupByStateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetStandardInclusions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pbrandid" type="xs:int" />
+        <xs:element minOccurs="0" name="pregiongroupid" type="xs:int" />
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="pstateid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetStandardInclusionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetStandardInclusionsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetSupplierBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pstateid" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetSupplierBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetSupplierBrandResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditSupplierBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supplierbrandid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pstateid" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditSupplierBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_CheckSupplierBrandExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pstateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_CheckSupplierBrandExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_CheckSupplierBrandExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_IsStandardInclusionExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="pbrandid" type="xs:int" />
+        <xs:element minOccurs="0" name="pregiongroupid" type="xs:int" />
+        <xs:element minOccurs="0" name="standardinclusionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_IsStandardInclusionExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_IsStandardInclusionExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_AddEditStandardInclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="standardinclusionid" type="xs:int" />
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="pbrandid" type="xs:int" />
+        <xs:element minOccurs="0" name="pregiongroupid" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" type="xs:decimal" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_AddEditStandardInclusionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_RemoveStandardInclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="standardinclusionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_RemoveStandardInclusionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAGFromMasterList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAGFromMasterListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAGFromMasterListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pbrandid" type="xs:int" />
+        <xs:element minOccurs="0" name="pregiongroupid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetAvailableStandardInclusionPAGResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_SaveStandardInclusionToBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regiongroupid" type="xs:int" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_SaveStandardInclusionToBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_GetSourceHomeByBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="homename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_GetSourceHomeByBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeMinimumArea_GetSourceHomeByBrandResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_GetTargetHomeByBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="homename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_GetTargetHomeByBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeMinimumArea_GetTargetHomeByBrandResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_CopyMinimumAreasFromSourceHomeToTargetHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourcehomeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targethomeidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeMinimumArea_CopyMinimumAreasFromSourceHomeToTargetHomeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UploadImageToSharepointImageLibrary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="supplierid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UploadImageToSharepointImageLibraryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_RelatedArea_LoadProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadExistingAreasForProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadExistingAreasForProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_RelatedArea_LoadExistingAreasForProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadAvailableAreasForProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="callfrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_LoadAvailableAreasForProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_RelatedArea_LoadAvailableAreasForProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_AddSelectedAreasToProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="callfrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_AddSelectedAreasToProductResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_RemooveSelectedAreasFromProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="callfrom" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_RelatedArea_RemooveSelectedAreasFromProductResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetStudioMProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetStudioMProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetStudioMProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_BulkConfigureStudiomQandA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supplierbrandid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="questionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="answeridstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_BulkConfigureStudiomQandAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_BulkConfigureStudiomQandAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Home_GetHomeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="homename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Home_GetHomeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Home_GetHomeListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Home_GetHomePlanByStateAndBrands">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Home_GetHomePlanByStateAndBrandsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Home_GetHomePlanByStateAndBrandsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAreas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetAreasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetGroupsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetAvailablePAGForHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetAvailablePAGForHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_GetAvailablePAGForHomeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetExistingPAGForHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetExistingPAGForHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_GetExistingPAGForHomeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_AddProductToHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedpagid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="qtystring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="changeqtystring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="changepricestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extradescstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_AddProductToHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_AddProductToHomeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_UpdatePagForHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="changeqty" type="xs:int" />
+        <xs:element minOccurs="0" name="changeprice" type="xs:int" />
+        <xs:element minOccurs="0" name="extradesc" type="xs:int" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_UpdatePagForHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_UpdatePagForHomeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_RemoveProductsFromHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedpagids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_RemoveProductsFromHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_RemoveProductsFromHomeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_GetProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_GetProductsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_CopyProductConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceproductid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetproductid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_CopyProductConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_CopyProductConfigurationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_GetHomeModelQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_GetHomeModelQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_QuantityManagement_GetHomeModelQuantityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_GetHomeFacadeQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_GetHomeFacadeQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_QuantityManagement_GetHomeFacadeQuantityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homemodel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeModelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeFacade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeFacadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_QuantityManagement_UpdateQuantityForAreaGroupAtHomeFacadeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_RefreshQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_QuantityManagement_RefreshQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_QuantityManagement_RefreshQuantityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_BulkUpdateQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_BulkUpdateQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_BulkUpdateQuantityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_BulkUpdateHomeModelQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_HomeConfiguration_BulkUpdateHomeModelQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_HomeConfiguration_BulkUpdateHomeModelQuantityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SearchDisclaimers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeid" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SearchDisclaimersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_SearchDisclaimersResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SearchDisclaimer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="depositDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SearchDisclaimerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_SearchDisclaimerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_BasePriceHoldDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_BasePriceHoldDaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_BasePriceHoldDaysResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_UpdateBasePriceHoldDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daysfrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daysto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="depositamount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmapercent" type="xs:decimal" />
+        <xs:element minOccurs="0" name="surchargepercent" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpsinglestorey" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpdoublestorey" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpSingleStoryDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpDoubleStoryDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpSingleStoreyCostSiteOther" type="xs:decimal" />
+        <xs:element minOccurs="0" name="btpDoubleStoreyCostSiteOther" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_UpdateBasePriceHoldDaysResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_NeweBasePriceHoldDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daysfrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daysto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="active" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="depositamount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmapercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surchargepercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionalsurchargeSSpercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionalsurchargeSDpercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="btpSingleStoryDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="btpDoubleStoryDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="btpSingleStoreyCostSiteOther" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="btpDoubleStoreyCostSiteOther" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_NeweBasePriceHoldDaysResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SaveDisclaimer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="disclaimerText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internalNotes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectiveDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_SaveDisclaimerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_SaveDisclaimerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetState">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetStateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetRegionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetRegionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetRegionListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAllAreas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAllAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetAllAreasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAllGroups">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAllGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetAllGroupsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetGroupsFromArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetGroupsFromAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetGroupsFromAreaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetBrandByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetBrandByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetBrandByStateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetHomeNameBySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="homename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetHomeNameBySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetHomeNameBySearchResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSQSConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSQSConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetSQSConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSpecificationByStateRegionsBrands">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="systemid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="attachmentid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homestring" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSpecificationByStateRegionsBrandsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetSpecificationByStateRegionsBrandsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSpecificationByStateRegionBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="effdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="systemid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="attachmentid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homestring" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetSpecificationByStateRegionBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetSpecificationByStateRegionBrandResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_SaveSpecificationByStateRegionBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="effdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="systemformid" type="xs:int" />
+        <xs:element minOccurs="0" name="attachmenttypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_SaveSpecificationByStateRegionBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAvailabeAreasByHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAvailabeAreasByHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetAvailabeAreasByHomeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetConfiguredAreasByHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetConfiguredAreasByHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetConfiguredAreasByHomeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_AddMinimumAreasToHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedareaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_AddMinimumAreasToHomeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_RemoveMinimumAreasFromHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedareaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_RemoveMinimumAreasFromHomeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAvailablePAGByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetAvailablePAGByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetAvailablePAGByStateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetDisplayHomeByPAGAndState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayhomename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suburb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetDisplayHomeByPAGAndStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetDisplayHomeByPAGAndStateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ReplaceDisplayHomePAG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="existingpagid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newpagid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayhomeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="qty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="changeqty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="changeprice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="allowdesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newextradesc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ReplaceDisplayHomePAGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ReplaceDisplayHomePAGResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductUOM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductUOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetProductUOMResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetProductCategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetProductCodeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductDisplayCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="forpromo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductDisplayCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetProductDisplayCodeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCostCenterCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_GetProductCostCenterCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_GetProductCostCenterCodeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ImportProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceVerticalFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceVerticalFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ImportPriceVerticalFormatResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceHorizontalFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceHorizontalFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ImportPriceHorizontalFormatResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceHorizontalFormatNSW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportPriceHorizontalFormatNSWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ImportPriceHorizontalFormatNSWResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ImportQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ImportQuantityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_CheckExistingProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_CheckExistingProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_CheckExistingProductsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceVerticalFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceVerticalFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ValidatePriceVerticalFormatResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceHorizontalFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceHorizontalFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ValidatePriceHorizontalFormatResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceHorizontalFormatNSW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidatePriceHorizontalFormatNSWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ValidatePriceHorizontalFormatNSWResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidateQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Generic_ValidateQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Generic_ValidateQuantityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="storey" type="xs:int" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetPromotionListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionTypeList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetPromotionTypeListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdateMultiplePromotionName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="promotionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="promotionname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdateMultiplePromotionNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_UpdateMultiplePromotionNameResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CheckMasterPromotionProductExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CheckMasterPromotionProductExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_CheckMasterPromotionProductExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CheckMultiplePromotionExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="stories" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CheckMultiplePromotionExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_CheckMultiplePromotionExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_SavePromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandid" type="xs:int" />
+        <xs:element minOccurs="0" name="storey" type="xs:int" />
+        <xs:element minOccurs="0" name="promotiontypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="promotionname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="promotioncost" type="xs:decimal" />
+        <xs:element minOccurs="0" name="capevalue" type="xs:decimal" />
+        <xs:element minOccurs="0" name="forregional" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="displaycodeid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_SavePromotionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetPromotionDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetAvailableProductsForPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="productstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetAvailableProductsForPromotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetAvailableProductsForPromotionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_AddProductsToPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedpagid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_AddProductsToPromotionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetAreaInPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetAreaInPromotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetAreaInPromotionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetGroupInPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetGroupInPromotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetGroupInPromotionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionForProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionForProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetPromotionForProductResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetExistingProductsForPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="productstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetExistingProductsForPromotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetExistingProductsForPromotionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionForCopy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_GetPromotionForCopyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_GetPromotionForCopyResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CopyPromotionProductsFromSourceToTarget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetpromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="sourcepromotionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_CopyPromotionProductsFromSourceToTargetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_Promotion_CopyPromotionProductsFromSourceToTargetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_RemoveProductsFromPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedpagid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_RemoveProductsFromPromotionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdateProductForPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="defaultselected" type="xs:int" />
+        <xs:element minOccurs="0" name="discount" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdateProductForPromotionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdatePromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="multiplepromotionid" type="xs:int" />
+        <xs:element minOccurs="0" name="baseproduct" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="promotioncost" type="xs:decimal" />
+        <xs:element minOccurs="0" name="capevalue" type="xs:decimal" />
+        <xs:element minOccurs="0" name="forregional" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="displaycodeid" type="xs:int" />
+        <xs:element minOccurs="0" name="promotionname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_Promotion_UpdatePromotionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetSuppliers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="suppliername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetSuppliersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetSuppliersResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetActiveQuestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetActiveQuestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetActiveQuestionsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SearchActiveQuestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="searchtext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SearchActiveQuestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_SearchActiveQuestionsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerForQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerForQuestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetAnswerForQuestionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAvailableGroupListForRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retailclusterid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAvailableGroupListForRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetAvailableGroupListForRetailClusterResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetExistingGroupListForRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retailclusterid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetExistingGroupListForRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetExistingGroupListForRetailClusterResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="clustername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetRetailClusterResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UpdateProductStudioMAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="attribute" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UpdateProductStudioMAttributeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductStudioMAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductStudioMAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetProductStudioMAttributeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsSupplierExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="suppliername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsSupplierExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_IsSupplierExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsRetailClusterExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="clustername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsRetailClusterExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_IsRetailClusterExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retailclusterid" type="xs:int" />
+        <xs:element minOccurs="0" name="clustername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="loginuser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SaveSelectedGroupToRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retailclusterid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedgroupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SaveSelectedGroupToRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_RemoveSelectedGroupFromRetailCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retailclusterid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedgroupid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_RemoveSelectedGroupFromRetailClusterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditSupplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supplierid" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="suppliername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditSupplierResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetAnswerTypeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetQuestionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetQuestionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetQuestionListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsQuestionExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="answertypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="questiontext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsQuestionExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_IsQuestionExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionid" type="xs:int" />
+        <xs:element minOccurs="0" name="answertypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="questiontext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="mandatory" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditQuestionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questiontext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="answertext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetAnswerListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetAnswerListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsAnswerExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionid" type="xs:int" />
+        <xs:element minOccurs="0" name="answertext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_IsAnswerExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_IsAnswerExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionid" type="xs:int" />
+        <xs:element minOccurs="0" name="answerid" type="xs:int" />
+        <xs:element minOccurs="0" name="answertext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_AddEditAnswerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productdescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="studiomproduct" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetProductPriceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="supplierid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetProductImagesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SaveProductImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="supplierid" type="xs:int" />
+        <xs:element minOccurs="0" name="imagestream" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_SaveProductImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_RemoveProductImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_RemoveProductImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductByCategoryCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_GetProductByCategoryCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_GetProductByCategoryCountResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetStandardInclusionProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="proudctname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetStandardInclusionProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetStandardInclusionProductsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetUpgradeOptionByStandardInclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetUpgradeOptionByStandardInclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetUpgradeOptionByStandardInclusionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableUpgradeOptionProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="proudctname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="stdinclusionproductid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_GetAvailableUpgradeOptionProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StandardInclusion_GetAvailableUpgradeOptionProductsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_RemoveValidationRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="validationruleid" type="xs:int" />
+        <xs:element minOccurs="0" name="update" type="xs:boolean" />
+        <xs:element minOccurs="0" name="active" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_RemoveValidationRuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_SaveValidationRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="standardinclusionproductid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="upgradeoptionproductids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="brandids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="promotion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="effectivedate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StandardInclusion_SaveValidationRuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UpdateStudioMAttributeForClusterOrGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="supplieridstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="questionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="answeridstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mandatorystring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_UpdateStudioMAttributeForClusterOrGroupResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_LoadStudioMAttributeForClusterOrGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SQSAdmin_StudioM_LoadStudioMAttributeForClusterOrGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQSAdmin_StudioM_LoadStudioMAttributeForClusterOrGroupResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+﻿<Application x:Class="SQSAdmin_WpfCustomControlLibrary.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+             >
+    <Application.Resources>
+        <!--<ResourceDictionary Source="Themes\BureauBlue.xaml"/>-->
+        <!--<ResourceDictionary Source="/ReuxablesLegacy;component/candy.xaml" />-->
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/BureauBlack.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
+     
+    </Application.Resources>
+    
+</Application>

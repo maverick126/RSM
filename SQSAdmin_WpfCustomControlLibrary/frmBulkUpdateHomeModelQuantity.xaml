@@ -1,0 +1,42 @@
+﻿<Window x:Class="SQSAdmin_WpfCustomControlLibrary.frmBulkUpdateHomeModelQuantity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="Update Quantity" Height="350" Width="400">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="/ReuxablesLegacy;component/candy.xaml"/>-->
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/MyStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/SimpleStyles.xaml"/>
+                <!--<ResourceDictionary Source="/PresentationFramework.Aero;V3.0.0.0;31bf3856ad364e35;component\themes/aero.normalcolor.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <!--<xcpt:Office2007BlueResourceDictionary LicenseKey="XPT20-N4KJA-Y4AEA-ABUA"/>-->
+    </Window.Resources>
+    <Border x:Name="myNavigationBorder1" BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Grid.ColumnSpan="1">
+        <Border BorderBrush="{DynamicResource MyBrightBlueSolidBrush2}" BorderThickness="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="myNavigationBorder2">
+            <Border BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Background="#FFFFFFFF" ScrollViewer.HorizontalScrollBarVisibility="Auto" x:Name="myNavigationBorder3">
+                <DockPanel Background="{DynamicResource MyToolBarBlueGradientBrush}">
+                    <Grid>
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="33,30,0,0" Name="textBlock1" Text="Home Model:" VerticalAlignment="Top" />
+                        <TextBox Style="{DynamicResource SimpleTextBox}" AcceptsReturn="True" Height="70" HorizontalAlignment="Left" Margin="145,30,0,0" Name="txthome" VerticalAlignment="Top" Width="173" VerticalScrollBarVisibility="Auto" IsReadOnly="True" />
+
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="33,110,0,0" Name="textBlock2" Text="Area Name:" VerticalAlignment="Top" />
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="145,110,0,0" Name="textBlock2_1" Text="" VerticalAlignment="Top" />
+
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="33,140,0,0" Name="textBlock3" Text="Group Name:" VerticalAlignment="Top" />
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="145,140,0,0" Name="textBlock3_1" Text="" VerticalAlignment="Top" />
+
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="33,170,0,0" Name="textBlock5" Text="New Quantity:" VerticalAlignment="Top" />
+                        <TextBox Style="{DynamicResource SimpleTextBox}" Height="23" HorizontalAlignment="Left" Margin="145,170,0,0" Name="txtQty" VerticalAlignment="Top" Width="173" />
+
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="33,215,0,0" Name="textBlock6" Text="" VerticalAlignment="Top"  Foreground="Red" />
+
+                        <Button Style="{DynamicResource MyButtonStyle}" Content="Update Qty" Height="23" HorizontalAlignment="Left" Margin="120,260,0,0" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+                        <Button Style="{DynamicResource MyButtonStyle}" Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="210,260,0,0" Name="btnClose" VerticalAlignment="Top" Width="75" Click="btnClose_Click" />
+                    </Grid>
+                </DockPanel>
+            </Border>
+        </Border>
+    </Border>
+</Window>

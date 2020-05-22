@@ -1,0 +1,169 @@
+﻿<Window x:Class="SQSAdmin_WpfCustomControlLibrary.frmDOLProductReplacement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:SQSAdmin_WpfCustomControlLibrary.Common"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+        xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"  
+        xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Height="900" Unloaded="Window_Unloaded"
+        Title="Replace Display Home Product" WindowStartupLocation="CenterScreen" ResizeMode="CanResize"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/MyStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/SimpleStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/DataGridCustomizations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border x:Name="myNavigationBorder1" BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5">
+        <Border BorderBrush="{DynamicResource MyBrightBlueSolidBrush2}" BorderThickness="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="myNavigationBorder2">
+            <Border BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Background="#FFFFFFFF" ScrollViewer.HorizontalScrollBarVisibility="Auto" x:Name="myNavigationBorder3">
+
+                <Grid Background="{DynamicResource MyToolBarBlueGradientBrush}">
+                    
+                    <TextBlock Height="37" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{DynamicResource MyToolBarBlueGradientBrush}" FontWeight="Bold" FontSize="12" ></TextBlock>
+                    <TextBlock Height="22" HorizontalAlignment="Stretch" Margin="10,8,10,0" Name="textBlock1" Text="{Binding}" VerticalAlignment="Top" FontWeight="Bold" FontSize="12"  />
+                    <GroupBox  Header="Replace with New Product" Height="300" Name="groupBox1" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="610,40,10,10" BorderThickness="1" BorderBrush="DarkBlue" >
+                        <Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="180*"/>
+                                <RowDefinition Height="2" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,2,10,2">Area:</TextBlock>
+                            <ComboBox Grid.Row="1" Grid.Column="1" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" HorizontalAlignment="Left" Name="cmbArea2" Width="200" ItemsSource="{Binding Path=SQSAllAreaForAvailableProduct}" SelectedValuePath="AreaID" DisplayMemberPath="AreaName" SelectedIndex="0" SelectionChanged="cmbArea2_SelectionChanged" ></ComboBox>
+                            <TextBlock Grid.Row="1" Grid.Column="2" Margin="10,2,10,2">Group:</TextBlock>
+                            <ComboBox Grid.Row="1" Grid.Column="3" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" HorizontalAlignment="Left" Name="cmbGroup2" Width="200" ItemsSource="{Binding Path=SQSFilteredGroupForAvailableProduct2}" SelectedValuePath="GroupID" DisplayMemberPath="GroupName" SelectedIndex="0"></ComboBox>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Margin="10,2,10,2">Product:</TextBlock>
+                            <TextBox Grid.Row="2" Grid.Column="1" Style="{DynamicResource SimpleTextBox}" Height="22" HorizontalAlignment="Left" Name="txtProductID2" Width="200" />
+                            <TextBlock Grid.Row="2" Grid.Column="2" Margin="10,2,10,2">PAG ID:</TextBlock>
+                            <TextBox Grid.Row="2" Grid.Column="3" Style="{DynamicResource SimpleTextBox}" Height="22" HorizontalAlignment="Left" Name="txtPAGID2" Width="200" />
+                            <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" Name="btnSearch2" Width="75" Click="btnSearch2_Click" Grid.ColumnSpan="2"  HorizontalAlignment="Right" Margin="3,2,20,1" />
+
+                            <dg:DataGrid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}"
+                                                 HorizontalAlignment="Stretch" VerticalContentAlignment="Top" Margin="5,5,5,5" Width="Auto" Height="170" Name="dataGrid2" ItemsSource="{Binding}" AutoGenerateColumns="False" 
+                                                 VirtualizingStackPanel.IsVirtualizing="False"    
+                                                     >
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected2" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="chkSelected2_Checked"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="PAG ID" Binding="{Binding Path=productareagroupid}" Width="60" IsReadOnly="True"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Product ID" Binding="{Binding Path=productid}" Width="100" IsReadOnly="True"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Area Name" Binding="{Binding Path=areaname}" Width="100" IsReadOnly="True"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Group Name" Binding="{Binding Path=groupname}" Width="100" IsReadOnly="True"></dg:DataGridTextColumn>
+                                    <dg:DataGridTemplateColumn Header="Product Name" IsReadOnly="True" Width="200">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=productname}" TextWrapping="Wrap"></TextBlock>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                </dg:DataGrid.Columns>
+
+                            </dg:DataGrid>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Select Existing Product" Height="300" Name="group1" Width="588" VerticalAlignment="Top"  Margin="10,40,10,10" HorizontalAlignment="Left" BorderBrush="DarkBlue">
+                        <Grid>
+
+                            <TextBlock  Margin="10,10,10,2">Area:</TextBlock>
+                            <ComboBox Margin="90,10,10,2" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="cmbArea" Width="200" ItemsSource="{Binding Path=SQSAllAreaForAvailableProduct}" SelectedValuePath="AreaID" DisplayMemberPath="AreaName" SelectedIndex="0"  SelectionChanged="cmbArea_SelectionChanged"></ComboBox>
+                            <TextBlock Margin="300,10,10,2">Group:</TextBlock>
+                            <ComboBox Margin="350,10,10,2" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="cmbGroup" Width="200" ItemsSource="{Binding Path=SQSFilteredGroupForAvailableProduct}" SelectedValuePath="GroupID" DisplayMemberPath="GroupName" SelectedIndex="0"></ComboBox>
+                            <TextBlock Margin="10,35,10,2">Product:</TextBlock>
+                            <TextBox Margin="90,35,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtProductID" Width="200" />
+                            <TextBlock Margin="300,35,10,2">PAG ID:</TextBlock>
+                            <TextBox Margin="350,35,0,0" VerticalAlignment="Top" Style="{DynamicResource SimpleTextBox}" Height="22" HorizontalAlignment="Left" Name="txtPAGID" Width="200" />
+                            <Button Margin="474,65,26,0" VerticalAlignment="Top" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" Name="btnSearch1" Width="75" Click="btnSearch1_Click" />
+
+                            <dg:DataGrid CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}" VerticalAlignment="Top" Height="172"  VirtualizingStackPanel.IsVirtualizing="False"
+                                                 HorizontalAlignment="Left" Margin="10,98,0,0" Name="dataGrid1" ItemsSource="{Binding}" AutoGenerateColumns="False"
+                                                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="chkSelected_Checked"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="PAG ID" Binding="{Binding Path=productareagroupid}" Width="60"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Product ID" Binding="{Binding Path=productid}" Width="100"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Area Name" Binding="{Binding Path=areaname}" Width="120"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Group Name" Binding="{Binding Path=groupname}" Width="120"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Product Name" Binding="{Binding Path=productname}" Width="300"></dg:DataGridTextColumn>
+                                </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                            <WindowsFormsHost  Height="Auto" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="Auto" Visibility="Collapsed" x:Name="imagebox" Background="Transparent">
+                                <wf:PictureBox x:Name="loadingimage"></wf:PictureBox>
+                            </WindowsFormsHost>
+                        </Grid>
+
+                    </GroupBox>
+                    <GroupBox Header="Select Display Homes" Height="Auto" Name="group2" Width="Auto" VerticalAlignment="Stretch"  Margin="10,345,10,10" HorizontalAlignment="Stretch" BorderBrush="DarkBlue">
+                        <Grid>
+                            <TextBlock  Margin="10,10,10,2">Brand:</TextBlock>
+                            <ComboBox Margin="70,10,10,2" Style="{DynamicResource MyEditableComboBoxStyle}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="cmbBrand" Width="200" ItemsSource="{Binding Path=SQSBrandWithAll}" SelectedValuePath="BrandID" DisplayMemberPath="BrandName" SelectedIndex="0"  SelectionChanged="cmbBrand_SelectionChanged"></ComboBox>
+                            <TextBlock Margin="310,10,10,2">Home Name:</TextBlock>
+                            <TextBox Margin="390,10,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtHomeName" Width="150" />
+                            <TextBlock Margin="560,10,10,2">Dispay Suburb:</TextBlock>
+                            <TextBox Margin="660,10,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtSuburb" Width="150" />
+                            <Button Margin="820,10,26,0" VerticalAlignment="Top" Style="{DynamicResource MyButtonStyle}" HorizontalAlignment="Left" Content="Search" Height="23" Name="btnSearchDisplayHome" Width="75" Click="btnSearchDisplayHome_Click" />
+
+
+                            <dg:DataGrid CanUserAddRows="False" CanUserDeleteRows="False" Style="{DynamicResource DataGridDemoStyle}" VerticalAlignment="Stretch" Height="Auto"  VirtualizingStackPanel.IsVirtualizing="False"
+                                                 HorizontalAlignment="Left" Margin="10,42,10,35" Name="dataGridHome" ItemsSource="{Binding Path=SQSDisplayHome}" AutoGenerateColumns="False"
+                                                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                                >
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="Diplay ID" Binding="{Binding Path=DisplayHomeID}" Width="100"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Display Home" Binding="{Binding Path=DisplayHomeName}" Width="200"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Brand" Binding="{Binding Path=BrandName}" Width="200"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Suburb" Binding="{Binding Path=Suburb}" Width="200"></dg:DataGridTextColumn>
+                                    <dg:DataGridTextColumn Header="Address" Binding="{Binding Path=Address}" Width="*"></dg:DataGridTextColumn>
+                                </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="10,80,10,2" Height="25" x:Name="txtNoRecord" Text="There is no any display home configured with selected product!" Visibility="Collapsed"></TextBlock>
+                            <Button Margin="10,10,26,5" VerticalAlignment="Bottom" Style="{DynamicResource MyButtonStyle}" HorizontalAlignment="Right" Content="Replace New PAG in Selected Display Homes" Height="23" Name="btnReplacePAG" Width="275" Click="btnReplacePAG_Click" />
+                            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left"  Margin="10,0,0,-2" Height="25" Text="When replace retain " ></TextBlock>
+                            <CheckBox x:Name="chkqty" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="130,0,15,6" >Quantity</CheckBox>
+                            <CheckBox x:Name="chkchangeqty" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="200,0,15,6">Change Quantity</CheckBox>
+                            <CheckBox x:Name="chkchangeprice" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="320,0,15,6">Change Price</CheckBox>
+                            <CheckBox x:Name="chkenterdesc" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="420,0,15,6">Allow Extra Desc</CheckBox>
+                            <CheckBox x:Name="chkdesc" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="535,0,15,6" Click="chkdesc_Click">Extra Desc</CheckBox>
+                            <TextBlock x:Name="textBlockExtraDesc" VerticalAlignment="Bottom" HorizontalAlignment="Left"  Margin="620,3,0,-2" Height="25" Text="New Extra Description "></TextBlock>
+                            <TextBox x:Name="textBoxExtraDesc" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100" Margin="743,3,15,6"></TextBox>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+            </Border>
+        </Border>
+    </Border>
+</Window>

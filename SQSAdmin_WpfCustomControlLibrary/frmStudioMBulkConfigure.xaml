@@ -1,0 +1,244 @@
+﻿<Window x:Class="SQSAdmin_WpfCustomControlLibrary.frmStudioMBulkConfigure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Height="Auto" Title="Bulk Configure Studio Questions and Answers" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="1212" SizeToContent="Width">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/MyStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/SimpleStyles.xaml"/>
+                <ResourceDictionary Source="/SQSAdmin_WpfCustomControlLibrary;component/Themes/DataGridCustomizations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border x:Name="myNavigationBorder1" BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5">
+        <Border BorderBrush="{DynamicResource MyBrightBlueSolidBrush2}" BorderThickness="5,5,5,5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="myNavigationBorder2">
+            <Border BorderBrush="{DynamicResource MyDarkBlueSolidBrush}" BorderThickness="0.5,0.5,0.5,0.5" Background="#FFFFFFFF" ScrollViewer.HorizontalScrollBarVisibility="Auto" x:Name="myNavigationBorder3">
+                <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Grid Background="{DynamicResource MyToolBarBlueGradientBrush}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <TextBlock Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" Background="{DynamicResource MyToolBarBlueGradientBrush}" FontWeight="Bold" FontSize="12" ></TextBlock>
+                    <TextBlock Height="22" HorizontalAlignment="Stretch" Margin="10,15,10,0" Name="textBlock1" Text="Configure multiple questions and answers to multiple products for a selected supplier brand" VerticalAlignment="Top" FontWeight="Bold" FontSize="12"  />
+                    <TextBlock Height="23" Name="textBlock2" Text="Supplier Brand* " HorizontalAlignment="Left" Margin="20,65,10,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <Button Margin="0,65,15,0" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{DynamicResource MyButtonStyle}" Content="Reset All Selection" Height="23" Name="btnResetAll" Width="120" Click="btnResetAll_Click" />
+                        <ComboBox  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,60,0,0" Height="23" Name="cmbSupplier" Width="350" Style="{DynamicResource MyEditableComboBoxStyle}" ItemsSource="{Binding Path=SQSSupplierBrand}" SelectedValuePath="SupplierBrandID" DisplayMemberPath="SupplierBrandName" SelectedIndex="0" />
+                    <GroupBox  Height="237" Name="groupBox1"  VerticalAlignment="Top" HorizontalAlignment="Stretch"   Margin="15,82,10,0" BorderThickness="1" BorderBrush="DarkBlue" >
+                            <GroupBox.Header>
+                                <Label Foreground="Red">Products</Label>
+                            </GroupBox.Header>
+                        <Grid>
+                        <TextBlock Height="23" Name="textBlock3" Text="Product ID: " HorizontalAlignment="Left" Margin="15,10,10,0" VerticalAlignment="Top"/>
+                        <TextBox Margin="100,7,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtProductID" Width="120" />
+                        <TextBlock Height="23" Name="textBlock4" Text="Product Name: " HorizontalAlignment="Left" Margin="255,10,10,0" VerticalAlignment="Top"/>
+                        <TextBox Margin="350,7,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtProductName" Width="150" />
+                        <Button Margin="535,6,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" Name="btnSearchProduct" Width="75" Click="btnSearchProduct_Click" />
+                        <Button Margin="625,6,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Reset" Height="23" Name="btnResetProduct" Width="75" Click="btnResetProduct_Click" />
+                                <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="ProductGrid1" Margin="14,50,5,10" ItemsSource="{Binding Path=AvailableProduct}" Height="135" Width="650"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="True" HorizontalAlignment="Left" VerticalAlignment="Top" VirtualizingStackPanel.IsVirtualizing="False">
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="Product ID" Binding="{Binding Path=ProductID}" IsReadOnly="True" Width="110"></dg:DataGridTextColumn>
+                                    <dg:DataGridTemplateColumn Header="Product Name" Width="Auto"  IsReadOnly="True">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=ProductName}" Height="Auto" x:Name="txtproductname"></TextBlock>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <!--<dg:DataGridTemplateColumn Header="Product Description" Width="610" IsReadOnly="True">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=productDescription}" Height="Auto"></TextBlock>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>-->
+ 
+                                </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                              <CheckBox Margin="15,185,0,0" Name="chkAllProduct" Click="chkAllProduct_Click" Height="18">Select all</CheckBox>
+                            <!--<Button Margin="830,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Add" Height="23" Name="btnProductAdd" Width="60" Click="btnProductAdd_Click" />-->
+                                <Button  Name="btnProductAdd" Margin="695,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnProductAdd_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Add product to selected panel.">
+                                    <StackPanel>
+                                        <Image Source="Images/rightarrow.png" />
+                                    </StackPanel>
+                                </Button>                         
+                            <!--<Button Margin="830,120,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Remove" Height="23" Name="btnProductRemove" Width="60" Click="btnProductRemove_Click" />-->
+                                <Button  Name="btnProductRemove" Margin="695,120,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnProductRemove_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Remove product to selected panel.">
+                                    <StackPanel>
+                                        <Image Source="Images/leftarrow.png" />
+                                    </StackPanel>
+                                </Button>
+                                <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="ProductGrid2" Margin="750,50,5,10" VerticalAlignment="Top" ItemsSource="{Binding Path=SelectedProduct}" Height="135"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" HorizontalAlignment="Stretch" VirtualizingStackPanel.IsVirtualizing="False" Width="Auto">
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="Product ID" Binding="{Binding Path=ProductID}" IsReadOnly="True" Width="120"></dg:DataGridTextColumn>
+                                        <dg:DataGridTemplateColumn Header="Product Name" Width="Auto"  IsReadOnly="True">
+                                            <dg:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=ProductName}" Height="Auto" x:Name="txtproductname"></TextBlock>
+                                                </DataTemplate>
+                                            </dg:DataGridTemplateColumn.CellTemplate>
+                                        </dg:DataGridTemplateColumn>
+                                    </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                                <CheckBox Margin="752,185,0,0" Name="chkAllProduct2" Click="chkAllProduct2_Click" Height="18">Select all</CheckBox>
+                            </Grid>
+                    </GroupBox>
+                    <GroupBox  Height="300" Name="groupBox2"  VerticalAlignment="Top" HorizontalAlignment="Stretch"   Margin="15,320,10,0" BorderThickness="1" BorderBrush="DarkBlue" >
+                            <GroupBox.Header>
+                                <Label Foreground="Red">Questions</Label>
+                            </GroupBox.Header>                        
+                        <Grid>
+                            <TextBlock Height="23" Name="textBlock5" Text="Question: " HorizontalAlignment="Left" Margin="15,10,10,0" VerticalAlignment="Top"/>
+                            <TextBox Margin="100,7,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtQuestion" Width="200" />
+                            <Button Margin="330,6,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" Name="btnSearchQuestion" Width="75" Click="btnSearchQuestion_Click" />
+                            <Button Margin="415,6,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Reset" Height="23" Name="btnResetQuestion" Width="75" Click="btnResetQuestion_Click" />                            
+                            <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="QuestionGrid1" Margin="14,50,5,10" ItemsSource="{Binding Path=StudioMQuestion}" Height="210" Width="650"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="True" HorizontalAlignment="Left" VerticalAlignment="Top" VirtualizingStackPanel.IsVirtualizing="False">
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="ID" Binding="{Binding Path=QuestionID}" IsReadOnly="True" Width="40"></dg:DataGridTextColumn>
+                                    <dg:DataGridTemplateColumn Header="Question" Width="Auto"  IsReadOnly="True">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=QuestionText}" Height="Auto" x:Name="txtquestionname"></TextBlock>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                        <dg:DataGridTextColumn Header="Answer Type" Binding="{Binding Path=AnswerType}" IsReadOnly="True" ></dg:DataGridTextColumn>
+                                        <dg:DataGridCheckBoxColumn Header="Mandatory" Binding="{Binding Path=Mandatory}" IsReadOnly="True"></dg:DataGridCheckBoxColumn>
+
+                                </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                                <!--<Button Margin="680,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Add" Height="23" Name="btnQuestionAdd" Width="60" Click="btnQuestionAdd_Click" />-->
+                                <Button  Name="btnQuestionAdd" Margin="695,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnQuestionAdd_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Add question to selected panel.">
+                                    <StackPanel>
+                                        <Image Source="Images/rightarrow.png" />
+                                    </StackPanel>
+                                </Button>
+                                <!--<Button Margin="680,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Remove" Height="23" Name="btnQuestionRemove" Width="60" Click="btnQuestionRemove_Click" />-->
+                                <Button  Name="btnQuestionRemove" Margin="695,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnQuestionRemove_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Remove question from selected panel.">
+                                    <StackPanel>
+                                        <Image Source="Images/leftarrow.png" />
+                                    </StackPanel>
+                                </Button>
+                                <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="QuestionGrid2" Margin="750,50,5,10" ItemsSource="{Binding Path=SelectedQuestion}" Height="210" Width="Auto"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="True" HorizontalAlignment="Stretch" VerticalAlignment="Top" VirtualizingStackPanel.IsVirtualizing="False">
+                                <dg:DataGrid.Columns>
+                                    <dg:DataGridTemplateColumn Header="">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                    <dg:DataGridTextColumn Header="ID" Binding="{Binding Path=QuestionID}" IsReadOnly="True" Width="40"></dg:DataGridTextColumn>
+                                    <dg:DataGridTemplateColumn Header="Question" Width="Auto"  IsReadOnly="True">
+                                        <dg:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=QuestionText}" Height="Auto" x:Name="txtquestionname"></TextBlock>
+                                            </DataTemplate>
+                                        </dg:DataGridTemplateColumn.CellTemplate>
+                                    </dg:DataGridTemplateColumn>
+                                        <dg:DataGridTextColumn Header="Answer Type" Binding="{Binding Path=AnswerType}" IsReadOnly="True" ></dg:DataGridTextColumn>
+                                        <dg:DataGridCheckBoxColumn Header="Mandatory" Binding="{Binding Path=Mandatory}" IsReadOnly="True"></dg:DataGridCheckBoxColumn>
+
+                                </dg:DataGrid.Columns>
+                            </dg:DataGrid>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox  Height="315" Name="groupBox3"  VerticalAlignment="Top" HorizontalAlignment="Stretch"   Margin="15,625,10,10" BorderThickness="1" BorderBrush="DarkBlue" >
+                            <GroupBox.Header>
+                                <Label Foreground="Red">Answers</Label>
+                            </GroupBox.Header>
+                            <Grid>
+                            <TextBlock Height="23" Name="textBlock6" Text="Select question to load answer* " HorizontalAlignment="Left" Margin="15,10,10,0" VerticalAlignment="Top"/>
+                            <ComboBox  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,7,0,0" Height="23" Name="cmbQuestion" Width="350" Style="{DynamicResource MyEditableComboBoxStyle}" ItemsSource="{Binding Path=SelectedQuestion}" SelectedValuePath="QuestionID" DisplayMemberPath="QuestionText" SelectedIndex="0" SelectionChanged="cmbQuestion_SelectionChanged" />
+                            <Grid>
+                                <!--<TextBlock Height="23" Name="textBlock5" Text="Question: " HorizontalAlignment="Left" Margin="15,10,10,0" VerticalAlignment="Top"/>
+                                <TextBox Margin="100,7,10,2" Style="{DynamicResource SimpleTextBox}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Name="txtQuestion" Width="200" />
+                                <Button Margin="330,6,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Search" Height="23" Name="btnSearchQuestion" Width="75" Click="btnSearchQuestion_Click" />-->
+                                <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="AnswerGrid1" Margin="14,50,5,10" ItemsSource="{Binding Path=StudioMAnswer}" Height="210" Width="650"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="True" HorizontalAlignment="Left" VerticalAlignment="Top" VirtualizingStackPanel.IsVirtualizing="False">
+                                    <dg:DataGrid.Columns>
+                                        <dg:DataGridTemplateColumn Header="">
+                                            <dg:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </DataTemplate>
+                                            </dg:DataGridTemplateColumn.CellTemplate>
+                                        </dg:DataGridTemplateColumn>
+                                        <dg:DataGridTextColumn Header="ID" Binding="{Binding Path=AnswerID}" IsReadOnly="True" Width="40"></dg:DataGridTextColumn>
+                                        <dg:DataGridTemplateColumn Header="Answer" Width="Auto"  IsReadOnly="True">
+                                            <dg:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=AnswerText}" Height="Auto" x:Name="txtanswername"></TextBlock>
+                                                </DataTemplate>
+                                            </dg:DataGridTemplateColumn.CellTemplate>
+                                        </dg:DataGridTemplateColumn>
+                                   </dg:DataGrid.Columns>
+                                </dg:DataGrid>
+                                    <CheckBox Margin="15,265,0,0" Name="chkAll" Click="chkAll_Click" Height="18">Select all</CheckBox>
+                                    <!--<Button Margin="680,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Add" Height="23" Name="btnAnswerAdd" Width="60" Click="btnAnswerAdd_Click" />-->
+                                    <Button  Name="btnAnswerAdd" Margin="695,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnAnswerAdd_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Add answer to selected panel.">
+                                        <StackPanel>
+                                            <Image Source="Images/rightarrow.png" />
+                                        </StackPanel>
+                                    </Button>
+                                    <!--<Button Margin="680,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource MyButtonStyle}" Content="Remove" Height="23" Name="btnAnswerRemove" Width="60" Click="btnAnswerRemove_Click" />-->
+                                    <Button  Name="btnAnswerRemove" Margin="695,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnAnswerRemove_Click" CommandParameter="{Binding}" Cursor="Hand" Width="20" ToolTip="Remove answer from selected panel.">
+                                        <StackPanel>
+                                            <Image Source="Images/leftarrow.png" />
+                                        </StackPanel>
+                                    </Button>                                
+                                    <dg:DataGrid Style="{DynamicResource DataGridDemoStyle}" AutoGenerateColumns="False" Name="AnswerGrid2" Margin="750,50,5,10" ItemsSource="{Binding Path=SelectedAnswer}" Height="210" Width="Auto"
+                                 CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="True" HorizontalAlignment="Stretch" VerticalAlignment="Top" VirtualizingStackPanel.IsVirtualizing="False">
+                                        <dg:DataGrid.Columns>
+                                            <dg:DataGridTemplateColumn Header="">
+                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <CheckBox x:Name="chkSelected" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </DataTemplate>
+                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                            </dg:DataGridTemplateColumn>
+                                            <dg:DataGridTextColumn Header="ID" Binding="{Binding Path=AnswerID}" IsReadOnly="True" Width="40"></dg:DataGridTextColumn>
+                                            <dg:DataGridTemplateColumn Header="Answer" Width="Auto"  IsReadOnly="True">
+                                                <dg:DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=AnswerText}" Height="Auto" x:Name="txtanswername"></TextBlock>
+                                                    </DataTemplate>
+                                                </dg:DataGridTemplateColumn.CellTemplate>
+                                            </dg:DataGridTemplateColumn>
+                                        </dg:DataGrid.Columns>
+                                    </dg:DataGrid>
+                                    <CheckBox Margin="750,265,0,0" Name="chkAll2" Click="chkAll2_Click" Height="18">Select all</CheckBox>
+                                </Grid>
+                        </Grid>
+                    </GroupBox>
+                        <Button Margin="0,945,10,10" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{DynamicResource MyButtonStyle}" Content="Configure Selected Answer" Height="23" Name="btnConfigure" Width="200" Click="btnConfigure_Click" />
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+        </Border>
+    </Border>
+</Window>

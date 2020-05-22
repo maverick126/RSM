@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3001DCF3-4F2C-4157-985F-A6EF96EA5B23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SQSAdmin</RootNamespace>
+    <AssemblyName>Retail System Management</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ManifestCertificateThumbprint>E8599C1917420ABBF620A08FB47E3A85ABB110F5</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SQSAdmin_14_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>Write.ico</ApplicationIcon>
+    <Win32Resource>
+    </Win32Resource>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>\\vm-webprod01\WEB%24\Websites\RSMApplication\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://sqsadmin/</InstallUrl>
+    <UpdateUrl>http://sqsadmin/</UpdateUrl>
+    <TargetCulture>en-AU</TargetCulture>
+    <ProductName>Retail System Management</ProductName>
+    <PublisherName>Metricon Homes Pty Ltd</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>4.7.15.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SQSAdmin_12_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalBinaries\AcroPDFLib\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer">
+      <HintPath>..\ExternalBinaries\HtmlRenderer.Core.1.5.0.5\lib\net40-client\HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\ExternalBinaries\AcroPDFLib\Interop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\ExternalBinaries\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit">
+      <HintPath>..\ExternalBinaries\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalendarCell.cs" />
+    <Compile Include="Common\classCustomizeScreenLookAndFeel.cs" />
+    <Compile Include="frmDisclaimerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBase.Designer.cs">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPAGtoPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPAGtoPromotion.Designer.cs">
+      <DependentUpon>frmAddPAGtoPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAreaGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAreaGroup.Designer.cs">
+      <DependentUpon>frmAreaGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAreaGroupBasedOnHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAreaGroupBasedOnHouse.Designer.cs">
+      <DependentUpon>frmAreaGroupBasedOnHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBulkPrintQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBulkPrintQRCode.Designer.cs">
+      <DependentUpon>frmBulkPrintQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigAreaGroupByHouseModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigAreaGroupByHouseModel.Designer.cs">
+      <DependentUpon>frmConfigAreaGroupByHouseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigBenchMarkPercentage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigBenchMarkPercentage.Designer.cs">
+      <DependentUpon>frmConfigBenchMarkPercentage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigPriceByRegionProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigPriceByRegionProductCategory.Designer.cs">
+      <DependentUpon>frmConfigPriceByRegionProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyPAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyPAG.Designer.cs">
+      <DependentUpon>frmCopyPAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisplayHomeDisplayOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisplayHomeDisplayOption.Designer.cs">
+      <DependentUpon>frmDisplayHomeDisplayOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDOLPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDOLPDF.Designer.cs">
+      <DependentUpon>frmDOLPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeDisplay.Designer.cs">
+      <DependentUpon>frmHomeDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeDisplayLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeDisplayLookup.Designer.cs">
+      <DependentUpon>frmHomeDisplayLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeDisplayOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeDisplayOption.Designer.cs">
+      <DependentUpon>frmHomeDisplayOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeLookup.Designer.cs">
+      <DependentUpon>frmHomeLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInclusionPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInclusionPackage.Designer.cs">
+      <DependentUpon>frmInclusionPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInclusionPackageLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInclusionPackageLookUp.Designer.cs">
+      <DependentUpon>frmInclusionPackageLookUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInclusionPackagePag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInclusionPackagePag.Designer.cs">
+      <DependentUpon>frmInclusionPackagePag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInclusionPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInclusionPromotion.Designer.cs">
+      <DependentUpon>frmInclusionPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLookup.Designer.cs">
+      <DependentUpon>frmLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPag.Designer.cs">
+      <DependentUpon>frmPag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagLookup.Designer.cs">
+      <DependentUpon>frmPagLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPAGWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPAGWizard.Designer.cs">
+      <DependentUpon>frmPAGWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPDF.Designer.cs">
+      <DependentUpon>frmPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrice.Designer.cs">
+      <DependentUpon>frmPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPriceDisplayCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceDisplayCode.Designer.cs">
+      <DependentUpon>frmPriceDisplayCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductCategory.Designer.cs">
+      <DependentUpon>frmProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductCodeDiscounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductCodeDiscounts.Designer.cs">
+      <DependentUpon>frmProductCodeDiscounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductCode.Designer.cs">
+      <DependentUpon>frmProductCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductCostCentre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductCostCentre.Designer.cs">
+      <DependentUpon>frmProductCostCentre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductDisplayOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDisplayOption.Designer.cs">
+      <DependentUpon>frmProductDisplayOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductLookup.Designer.cs">
+      <DependentUpon>frmProductLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductPrice.Designer.cs">
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromotion.Designer.cs">
+      <DependentUpon>frmPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromotionLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromotionLookup.Designer.cs">
+      <DependentUpon>frmPromotionLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQRCode.Designer.cs">
+      <DependentUpon>frmQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuantityManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuantityManagement.Designer.cs">
+      <DependentUpon>frmQuantityManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectHouseModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectHouseModel.Designer.cs">
+      <DependentUpon>frmSelectHouseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUOM.Designer.cs">
+      <DependentUpon>frmUOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IInputForm.cs" />
+    <Compile Include="ListViewItemComparer.cs" />
+    <Compile Include="MetriconCommon.cs" />
+    <Compile Include="PMO006STGDataSet.cs">
+      <DependentUpon>PMO006STGDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMO006STGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMO006STGDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SQSAdminWCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDisclaimerManagement.resx" />
+    <EmbeddedResource Include="frmAddPAGtoPromotion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddPAGtoPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAreaGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAreaGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAreaGroupBasedOnHouse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAreaGroupBasedOnHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBulkPrintQRCode.resx">
+      <DependentUpon>frmBulkPrintQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigAreaGroupByHouseModel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfigAreaGroupByHouseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigBenchMarkPercentage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfigBenchMarkPercentage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigPriceByRegionProductCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfigPriceByRegionProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyPAG.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCopyPAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisplayHomeDisplayOption.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDisplayHomeDisplayOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDOLPDF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDOLPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHomeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeDisplayLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHomeDisplayLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeDisplayOption.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHomeDisplayOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHomeLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInclusionPackage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInclusionPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInclusionPackageLookUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInclusionPackageLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInclusionPackagePag.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInclusionPackagePag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInclusionPromotion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInclusionPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPag.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPagLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPAGWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPAGWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPDF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceDisplayCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPriceDisplayCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductCodeDiscounts.resx">
+      <DependentUpon>frmProductCodeDiscounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProductCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductCostCentre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProductCostCentre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDisplayOption.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProductDisplayOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductLookup.resx">
+      <DependentUpon>frmProductLookup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductPrice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromotion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromotionLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPromotionLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQRCode.resx">
+      <DependentUpon>frmQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuantityManagement.resx">
+      <DependentUpon>frmQuantityManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectHouseModel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectHouseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUOM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMO006STGDataSet.xsc">
+      <DependentUpon>PMO006STGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMO006STGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMO006STGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMO006STGDataSet.xss">
+      <DependentUpon>PMO006STGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.wsdl" />
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQSAdmin_12_TemporaryKey.pfx" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServerManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tempkey.snk" />
+    <None Include="waitingImg.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\green.bmp" />
+    <None Include="bin\Debug\red.bmp" />
+    <None Include="bin\Debug\add.bmp" />
+    <None Include="bin\Debug\greentick.JPG" />
+    <None Include="Resources\HeaderImg.jpg" />
+    <None Include="Resources\HeaderSml.JPG" />
+    <None Include="Resources\add.bmp" />
+    <Content Include="Resources\bigrotation2.gif" />
+    <None Include="Resources\bigrotation21.gif" />
+    <None Include="Resources\booksmall.gif" />
+    <None Include="Resources\loading2.gif" />
+    <None Include="Resources\green.bmp" />
+    <None Include="Resources\greentick.JPG" />
+    <Content Include="Resources\loading_blue.gif" />
+    <None Include="Resources\loading_blue1.gif" />
+    <None Include="Resources\loading_blue2.gif" />
+    <Content Include="Resources\loading_green.gif" />
+    <None Include="Resources\loading_green1.gif" />
+    <None Include="Resources\preloader.gif" />
+    <None Include="Resources\Processing.gif" />
+    <None Include="Resources\processing_text.gif" />
+    <None Include="Resources\processingImage.gif" />
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.disco" />
+    <None Include="Service References\SQSAdminWCFService\configuration91.svcinfo" />
+    <None Include="Service References\SQSAdminWCFService\configuration.svcinfo" />
+    <None Include="Service References\SQSAdminWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\red.bmp" />
+    <Content Include="SQSAdminConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Write.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TempFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HtmlRichTextBox\HtmlRichTextBox.csproj">
+      <Project>{7a4b322e-ec19-4c89-9ba1-06c98d0c4911}</Project>
+      <Name>HtmlRichTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultiSelectComboBoxWinForms\MultiSelectComboBoxWinForms.csproj">
+      <Project>{70a25201-8ea4-48f8-a4a6-ed13adf8823c}</Project>
+      <Name>MultiSelectComboBoxWinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultiSelectComboBox\MultiSelectComboBox.csproj">
+      <Project>{ce17a54e-0661-429f-afdc-272e8668b14e}</Project>
+      <Name>MultiSelectComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQSAdminWCFService\SQSAdminWCFService.csproj">
+      <Project>{264ac80f-44a4-408f-8f0c-cb9454444e1d}</Project>
+      <Name>SQSAdminWCFService</Name>
+    </ProjectReference>
+    <ProjectReference Include="QRCodeLib\QRCodeLib.csproj">
+      <Project>{E98126B2-AF17-4783-96B9-856D6744DCA3}</Project>
+      <Name>QRCodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQSAdmin_WpfCustomControlLibrary\SQSAdmin_WpfCustomControlLibrary.csproj">
+      <Project>{73E72CDE-0DC4-4655-88D1-50F651FA460C}</Project>
+      <Name>SQSAdmin_WpfCustomControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SQSAdminWCFService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

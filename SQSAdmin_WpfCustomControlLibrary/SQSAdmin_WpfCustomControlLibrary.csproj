@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73E72CDE-0DC4-4655-88D1-50F651FA460C}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SQSAdmin_WpfCustomControlLibrary</RootNamespace>
+    <AssemblyName>SQSAdmin_WpfCustomControlLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\ExternalBinaries\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit">
+      <HintPath>..\ExternalBinaries\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\ExternalBinaries\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit">
+      <HintPath>..\ExternalBinaries\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit">
+      <HintPath>..\ExternalBinaries\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\..\..\temp\tempbin\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrlAnswer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlAvailableAreas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlBrands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlConfigureQAToCluster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlGroupList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlIntroduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlQuestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlRelatedAreas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlRetailCluster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlStudioMAttributes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrlSupplier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAreaGroupByHomePlan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmBasePriceHoldingDaysManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmBulkUpdateHomeModelQuantity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmBulkUpdateQuantity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConfigurePromotionProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConfigureSIToBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConfigureSupplierQAToCluster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmCopyProductConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmDocumentManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmDOLProductReplacement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmHomeConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmHomeList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmNewBasePriceHoldingDays.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmDocumentManagementSaveConfirm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmNewPromotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPagInPromotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPopUpInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPromotionCopy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmQuantityManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRefreshQtyWarning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmSearchProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmShowImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStandardInclusion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStandardInclusionMapping.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStandardInclusionPAGConfigure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStudioMAttributes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPromotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStudioMBulkConfigure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmStudioMFunctions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImportValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PriceImportValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuantityImportValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\BureauBlack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BureauBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DataGridCustomizations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionLight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MyStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\SimpleStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WhistlerBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmStudioM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommonVariables.cs" />
+    <Compile Include="Common\BulkConfigureResource.cs" />
+    <Compile Include="Common\CommonResource.cs" />
+    <Compile Include="Common\HomeAreaResource.cs" />
+    <Compile Include="Common\ManagementResource.cs" />
+    <Compile Include="Common\PagingCollectionView.cs" />
+    <Compile Include="Common\RelatedAreasSource.cs" />
+    <Compile Include="Common\RetailClusterSource.cs" />
+    <Compile Include="Common\StandardInclusionResource.cs" />
+    <Compile Include="Common\StudioMResource.cs" />
+    <Compile Include="Common\SupplierBrandResource.cs" />
+    <Compile Include="Common\ViewModelBase.cs" />
+    <Compile Include="ctrlAnswer.xaml.cs">
+      <DependentUpon>ctrlAnswer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlAvailableAreas.xaml.cs">
+      <DependentUpon>ctrlAvailableAreas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlBrands.xaml.cs">
+      <DependentUpon>ctrlBrands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlConfigureQAToCluster.xaml.cs">
+      <DependentUpon>ctrlConfigureQAToCluster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlGroupList.xaml.cs">
+      <DependentUpon>ctrlGroupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlIntroduction.xaml.cs">
+      <DependentUpon>ctrlIntroduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlQuestion.xaml.cs">
+      <DependentUpon>ctrlQuestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlRelatedAreas.xaml.cs">
+      <DependentUpon>ctrlRelatedAreas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlRetailCluster.xaml.cs">
+      <DependentUpon>ctrlRetailCluster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlStudioMAttributes.xaml.cs">
+      <DependentUpon>ctrlStudioMAttributes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlSupplier.xaml.cs">
+      <DependentUpon>ctrlSupplier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataConverter_boolToVisibility.cs" />
+    <Compile Include="DataConverter_VisibilityToBool.cs" />
+    <Compile Include="frmAreaGroupByHomePlan.xaml.cs">
+      <DependentUpon>frmAreaGroupByHomePlan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmBasePriceHoldingDaysManagement.xaml.cs">
+      <DependentUpon>frmBasePriceHoldingDaysManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmBulkUpdateHomeModelQuantity.xaml.cs">
+      <DependentUpon>frmBulkUpdateHomeModelQuantity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmBulkUpdateQuantity.xaml.cs">
+      <DependentUpon>frmBulkUpdateQuantity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigurePromotionProduct.xaml.cs">
+      <DependentUpon>frmConfigurePromotionProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigureSIToBrand.xaml.cs">
+      <DependentUpon>frmConfigureSIToBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigureSupplierQAToCluster.xaml.cs">
+      <DependentUpon>frmConfigureSupplierQAToCluster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyProductConfiguration.xaml.cs">
+      <DependentUpon>frmCopyProductConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentManagement.xaml.cs">
+      <DependentUpon>frmDocumentManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmDOLProductReplacement.xaml.cs">
+      <DependentUpon>frmDOLProductReplacement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeConfiguration.xaml.cs">
+      <DependentUpon>frmHomeConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeList.xaml.cs">
+      <DependentUpon>frmHomeList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewBasePriceHoldingDays.xaml.cs">
+      <DependentUpon>frmNewBasePriceHoldingDays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentManagementSaveConfirm.xaml.cs">
+      <DependentUpon>frmDocumentManagementSaveConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPromotion.xaml.cs">
+      <DependentUpon>frmNewPromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagInPromotion.xaml.cs">
+      <DependentUpon>frmPagInPromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopUpInformation.xaml.cs">
+      <DependentUpon>frmPopUpInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromotionCopy.xaml.cs">
+      <DependentUpon>frmPromotionCopy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuantityManagement.xaml.cs">
+      <DependentUpon>frmQuantityManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmRefreshQtyWarning.xaml.cs">
+      <DependentUpon>frmRefreshQtyWarning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchProduct.xaml.cs">
+      <DependentUpon>frmSearchProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowImage.xaml.cs">
+      <DependentUpon>frmShowImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStandardInclusion.xaml.cs">
+      <DependentUpon>frmStandardInclusion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStandardInclusionMapping.xaml.cs">
+      <DependentUpon>frmStandardInclusionMapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStandardInclusionPAGConfigure.xaml.cs">
+      <DependentUpon>frmStandardInclusionPAGConfigure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudioMAttributes.xaml.cs">
+      <DependentUpon>frmStudioMAttributes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudioMBulkConfigure.xaml.cs">
+      <DependentUpon>frmStudioMBulkConfigure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudioMFunctions.xaml.cs">
+      <DependentUpon>frmStudioMFunctions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImportValidation.xaml.cs">
+      <DependentUpon>ImportValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyDialog.xaml.cs">
+      <DependentUpon>MyDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MySetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MySetting.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PriceImportValidation.xaml.cs">
+      <DependentUpon>PriceImportValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmPromotion.xaml.cs">
+      <DependentUpon>frmPromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudioM.xaml.cs">
+      <DependentUpon>frmStudioM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuantityImportValidation.xaml.cs">
+      <DependentUpon>QuantityImportValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SQSAdminWCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConverter\DataConverter_DateTimeToStringConverter.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\SQSAdmin_WpfCustomControlLibrary.dll.config" />
+    <None Include="MySetting.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySetting.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.wsdl" />
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\ReuxablesLegacy.dll" />
+    <Content Include="bin\Debug\SQSAdmin_WpfCustomControlLibrary.dll" />
+    <Content Include="bin\Debug\SQSAdmin_WpfCustomControlLibrary.pdb" />
+    <Resource Include="Images\CharacterGrowFont.PNG" />
+    <Resource Include="Images\CharacterShrinkFont.PNG" />
+    <Resource Include="Images\EditRedo.PNG" />
+    <Resource Include="Images\EditUndo.PNG" />
+    <Resource Include="Images\ListBullets.PNG" />
+    <Resource Include="Images\ListNumbering.PNG" />
+    <Resource Include="Images\ParagraphCenterJustify.PNG" />
+    <Resource Include="Images\ParagraphDecreaseIndentation.PNG" />
+    <Resource Include="Images\ParagraphFullJustify.PNG" />
+    <Resource Include="Images\ParagraphIncreaseIndentation.PNG" />
+    <Resource Include="Images\ParagraphLeftJustify.PNG" />
+    <Resource Include="Images\ParagraphRightJustify.PNG" />
+    <Resource Include="Images\Editcopy.png" />
+    <Resource Include="Images\Editcut.png" />
+    <Resource Include="Images\Editpaste.png" />
+    <Resource Include="Images\pdficon.png" />
+    <None Include="Service References\SQSAdminWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SQSAdminWCFService\configuration.svcinfo" />
+    <None Include="Service References\SQSAdminWCFService\configuration91.svcinfo" />
+    <None Include="Service References\SQSAdminWCFService\SQSAdminService.disco" />
+    <None Include="Resources\processingImage.gif" />
+    <None Include="Resources\LoadingWait.gif" />
+    <None Include="Resources\processing_text.gif" />
+    <Resource Include="Images\minusBtn.png" />
+    <Resource Include="Images\plusBtn.bmp" />
+    <None Include="Resources\loading_blue_big.gif" />
+    <None Include="Resources\loading_blue_big.bmp" />
+    <Resource Include="Images\loading_blue_big.gif" />
+    <Resource Include="Images\uparrow.png" />
+    <Resource Include="Images\downarrow.png" />
+    <Resource Include="Images\cancel.png" />
+    <Resource Include="Images\bulkadd.png" />
+    <Resource Include="Images\cd_add.png" />
+    <Resource Include="Images\brand.png" />
+    <Resource Include="Images\box_download.png" />
+    <Resource Include="Images\cluster.png" />
+    <Resource Include="Images\workgroup.png" />
+    <Resource Include="Images\configure.png" />
+    <Resource Include="Images\link.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\reset.png" />
+    <Resource Include="Images\leftarrow.png" />
+    <Resource Include="Images\rightarrow.png" />
+    <Resource Include="Images\nextpage.png" />
+    <Resource Include="Images\prevpage.png" />
+    <Resource Include="Images\puzzle.png" />
+    <Resource Include="Images\Equipment.png" />
+    <Resource Include="Images\Key.png" />
+    <Resource Include="Images\link_32x32.png" />
+    <Resource Include="Images\puzzle_32x32.png" />
+    <Resource Include="Images\Color_balance.png" />
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\loading_blue3.gif" />
+    <Resource Include="loading_blue.gif" />
+    <Resource Include="Images\loading_blue.gif" />
+    <Resource Include="Images\search.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\question.png" />
+    <Resource Include="Images\brick_edit.png" />
+    <Resource Include="Images\lightbulb.png" />
+    <Resource Include="Images\link_edit.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\booksmall2.gif" />
+    <Resource Include="Images\book_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SQSAdminWCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiSelectComboBox\MultiSelectComboBox.csproj">
+      <Project>{ce17a54e-0661-429f-afdc-272e8668b14e}</Project>
+      <Name>MultiSelectComboBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.cache
+*.vspscc
+*.pdb
+*.user
+SQSAdmin/ThoughtWorks.QRCode.dll

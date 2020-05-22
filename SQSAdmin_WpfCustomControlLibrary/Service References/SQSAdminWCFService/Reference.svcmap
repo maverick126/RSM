@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0902f812-558a-4039-ab8f-f02be9875166" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51809/SQSAdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SQSAdminService2.xsd" MetadataType="Schema" ID="ecde0e74-e72d-4302-b0d4-03182f9e81a5" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SQSAdminService1.xsd" MetadataType="Schema" ID="744c0c79-10de-4e05-a4d0-85f00d52572e" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SQSAdminService.wsdl" MetadataType="Wsdl" ID="14ade22d-7957-4fc7-85e3-204f41bd7b37" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?wsdl" />
+    <MetadataFile FileName="SQSAdminService3.xsd" MetadataType="Schema" ID="6b061306-46c3-4a7b-b0b1-38ec48d1a9ed" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SQSAdminService.disco" MetadataType="Disco" ID="8f70407b-f610-4b29-a320-f87b7305699c" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?disco" />
+    <MetadataFile FileName="SQSAdminService.xsd" MetadataType="Schema" ID="ca6ccc89-f7ac-48c2-8b88-16da805d9281" SourceId="1" SourceUrl="http://localhost:51809/SQSAdminService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

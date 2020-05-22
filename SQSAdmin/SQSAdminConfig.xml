@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connectionStrings>
+	<conString>
+		<server>DEV</server>
+		<value>Data Source=PM-SQLDEVMEL01 ;Initial Catalog=PMO006DEV_May09;Persist Security Info=True;User ID=sqs;Password=password</value>
+	</conString>
+	<conString>
+		<server>STG</server>
+		<value>Data Source=PM-SQLDEVMEL01;Initial Catalog=PMO006PreProd;Persist Security Info=True;User ID=sqs;Password=password</value>		   
+	</conString>
+	<conString>
+		<server>LIVE</server>
+		<value>Data Source=PM-SQLCLUSTER;Initial Catalog=PMO006;Persist Security Info=True;User ID=sqs;Password=password</value>
+	</conString>
+</connectionStrings>

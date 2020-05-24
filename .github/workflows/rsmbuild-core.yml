@@ -39,17 +39,17 @@ jobs:
 
     # Build
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName 
+      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageLocation=$env:TargetPkgFileName -p:WebPublishMethod=Package
       env:
         Solution_Path: SQSAdmin\SQSAdmin.csproj      
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
-    - name: Upload SQS Admin build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
-        path: SQSAdminWCFService\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.*             
+    #- name: Upload SQS Admin build artifacts
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
+    #    path: SQSAdminWCFService\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.*             
 
     # Build
     #- name: MSBuild publish (SQS WCF Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)

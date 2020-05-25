@@ -47,13 +47,12 @@ jobs:
 
     # Build
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True  -p:IgnoreDeployManagedRuntimeVersion=True  
+      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:IgnoreDeployManagedRuntimeVersion=True  
         Solution_Path: SQSAdmin\SQSAdmin.csproj          
 
     - name: Archive package
       shell: powershell
-      run: |
-        Get-ChildItem -Path SQSAdmin\bin\release -Exclude "*.pdb, *.xml" | Compress-Archive -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+      run: Get-ChildItem -Path SQSAdmin\bin\release -Exclude "*.pdb, *.xml" | Compress-Archive -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
     - name: Upload SQS Admin build artifacts

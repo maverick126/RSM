@@ -73,7 +73,7 @@ jobs:
     #  run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
     #  env:
     #    Solution_Path: SQSAdminWCFService\SQSAdminWCFService.csproj      
-        TargetPkgFileName: SQSAdminWCF-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip   
+    #    TargetPkgFileName: SQSAdminWCF-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip   
 
     # Upload the  package 
     #- name: Upload SQS WCF ADmin build artifacts

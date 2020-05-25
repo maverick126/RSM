@@ -10,7 +10,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # get the branch name
+  # get the branch nam
   brname:
     runs-on: ubuntu-latest
     outputs:
@@ -23,6 +23,9 @@ jobs:
 
   # This workflow contains a single job called "build"
   build:
+    env:
+      filename: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+
     needs: brname
     # The type of runner that the job will run on
     runs-on: windows-latest
@@ -41,23 +44,19 @@ jobs:
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
       run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True  -p:IgnoreDeployManagedRuntimeVersion=True 
       env:
-        Solution_Path: SQSAdmin\SQSAdmin.csproj      
-        TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip     
+        Solution_Path: SQSAdmin\SQSAdmin.csproj          
 
     - name: Archive package
       shell: powershell
       run: |
-        Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination ${{ filename }}.zip
-      env:
-        filename: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
-        path: SQSAdmin\bin\release
+        Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
-    #- name: Upload SQS Admin build artifacts
-    #  uses: actions/upload-artifact@v2
-    #  with:
-    #    name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
-    #    path: SQSAdminWCFService\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.*             
+    - name: Upload SQS Admin build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
+        path: SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip            
 
     # Build
     #- name: MSBuild publish (SQS WCF Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)

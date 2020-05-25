@@ -58,7 +58,8 @@ jobs:
     - name: Archive package
       shell: powershell
       run: |
-        Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+        Get-ChildItem -Path SQSAdmin\bin\release -Exclude "*.pdb, *.xml" |
+        Compress-Archive -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
     - name: Upload SQS Admin build artifacts
@@ -68,15 +69,15 @@ jobs:
         path: SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip            
 
     # Build
-    - name: MSBuild publish (SQS WCF Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
-      env:
-        Solution_Path: SQSAdminWCFService\SQSAdminWCFService.csproj      
+    #- name: MSBuild publish (SQS WCF Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
+    #  run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
+    #  env:
+    #    Solution_Path: SQSAdminWCFService\SQSAdminWCFService.csproj      
         TargetPkgFileName: SQSAdminWCF-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip   
 
     # Upload the  package 
-    - name: Upload SQS WCF ADmin build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: SQS Admin WCF Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
-        path: SQSAdminWCFService\SQSAdminWCF-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.*                 
+    #- name: Upload SQS WCF ADmin build artifacts
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: SQS Admin WCF Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
+    #    path: SQSAdminWCFService\SQSAdminWCF-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.*                 

@@ -45,7 +45,9 @@ jobs:
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     - name: Check Release dir
-      run: dir D:\a\RSM\RSM\SQSAdmin\*
+      run: |
+        dir D:\a\RSM\RSM\SQSAdmin\bin\release
+        dir D:\a\RSM\RSM\SQSAdmin\app.config
 
     # Upload the  package
     #- name: Upload SQS Admin build artifacts

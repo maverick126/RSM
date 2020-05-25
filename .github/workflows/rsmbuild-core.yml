@@ -39,6 +39,11 @@ jobs:
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
 
     # Build
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
@@ -46,17 +51,21 @@ jobs:
       env:
         Solution_Path: SQSAdmin\SQSAdmin.csproj          
 
-    - name: Archive package
-      shell: powershell
-      run: |
-        Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+    - name: Dotnet publish
+      run: dotnet publish -r win-x64 -c Release --self-contained
+      working-directory: SQSAdmin 
+
+    #- name: Archive package
+    #  shell: powershell
+    #  run: |
+    #    Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
-    - name: Upload SQS Admin build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
-        path: SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip            
+    #- name: Upload SQS Admin build artifacts
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: SQS Admin Package ${{ needs.brname.outputs.bname }} ${{ github.run_id }} 
+    #    path: SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip            
 
     # Build
     - name: MSBuild publish (SQS WCF Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)

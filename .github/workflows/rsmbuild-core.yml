@@ -45,10 +45,9 @@ jobs:
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip     
 
     - name: Archive package
+      shell: powershell
       run: |
-        echo 'Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination $env:filename' > compress.ps1
-        type compress.ps1
-        .\compress.ps1
+        Compress-Archive -Path SQSAdmin\bin\release\*.* -Destination $env:filename
       env:
         filename: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
         path: SQSAdmin\bin\release

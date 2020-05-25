@@ -44,6 +44,9 @@ jobs:
         Solution_Path: SQSAdmin\SQSAdmin.csproj      
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
+    - name: Check Release dir
+      run: dir D:\a\RSM\RSM\SQSAdmin\*
+
     # Upload the  package
     #- name: Upload SQS Admin build artifacts
     #  uses: actions/upload-artifact@v2

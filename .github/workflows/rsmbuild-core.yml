@@ -47,7 +47,8 @@ jobs:
 
     # Build
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:IgnoreDeployManagedRuntimeVersion=True  
+      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:IgnoreDeployManagedRuntimeVersion=True
+      env:  
         Solution_Path: SQSAdmin\SQSAdmin.csproj          
 
     - name: Archive package

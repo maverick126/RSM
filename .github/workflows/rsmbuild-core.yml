@@ -53,7 +53,7 @@ jobs:
 
     - name: Archive package
       shell: powershell
-      run: Get-ChildItem -Path SQSAdmin\bin\release -Exclude "*.pdb, *.xml" | Compress-Archive -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+      run: Get-ChildItem -Path SQSAdmin\bin\release -Exclude "*.pdb", "*.xml" | Compress-Archive -Destination SQSAdmin\SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
     # Upload the  package
     - name: Upload SQS Admin build artifacts

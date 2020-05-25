@@ -39,7 +39,7 @@ jobs:
 
     # Build
     - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageLocation=$env:TargetPkgFileName -p:WebPublishMethod=Package
+      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True  -p:IgnoreDeployManagedRuntimeVersion=True 
       env:
         Solution_Path: SQSAdmin\SQSAdmin.csproj      
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip

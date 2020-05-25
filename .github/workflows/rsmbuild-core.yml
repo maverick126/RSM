@@ -40,20 +40,21 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
+    #- name: Setup .NET Core
+    #  uses: actions/setup-dotnet@v1
+    #  with:
+    #    dotnet-version: 3.1.101
 
     # Build
-    #- name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
-    #  run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True  -p:IgnoreDeployManagedRuntimeVersion=True 
-    #  env:
-    #    Solution_Path: SQSAdmin\SQSAdmin.csproj          
+    - name: MSBuild publish (SQS Admin) # Using profile (which might need extra treament to be character escaped, e.g. quotes, etc)
+      run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True  -p:IgnoreDeployManagedRuntimeVersion=True  -p:CreatePackageOnPublish=true -p:PackageLocation=$env:TargetPkgFileName
+      env:
+        Solution_Path: SQSAdmin\SQSAdmin.csproj          
+        TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
-    - name: Dotnet publish
-      run: dotnet build SQSAdmin.csproj --configuration Release --no-restore --output SQSAdmin2.zip
-      working-directory: SQSAdmin 
+    #- name: Dotnet publish
+    #  run: dotnet build SQSAdmin.csproj --configuration Release --no-restore --output SQSAdmin2.zip
+    #  working-directory: SQSAdmin 
 
     #- name: Archive package
     #  shell: powershell

@@ -44,10 +44,11 @@ jobs:
         Solution_Path: SQSAdmin\SQSAdmin.csproj      
         TargetPkgFileName: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
 
-    - name: Check Release dir
-      run: |
-        dir D:\a\RSM\RSM\SQSAdmin\bin\release
-        dir D:\a\RSM\RSM\SQSAdmin\app.config
+    - name: Archive package
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: SQSAdmin-${{ needs.brname.outputs.bname }}-${{ github.run_id }}.zip
+        path: SQSAdmin\bin\release
 
     # Upload the  package
     #- name: Upload SQS Admin build artifacts
